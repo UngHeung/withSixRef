@@ -3,7 +3,7 @@
  */
 
 import { ReactNode } from "react";
-import { BUTTON_TYPE_VARIANTS, INPUT_TYPE_VARIANTS, LAYOUT_TYPE_VARIANTS } from "../type/CommonType";
+import { BUTTON_TYPE_VARIANTS, LAYOUT_TYPE_VARIANTS } from "../type/CommonType";
 
 export interface LayoutProps {
   typeVariants: LAYOUT_TYPE_VARIANTS;
@@ -17,8 +17,9 @@ export interface ButtonProps {
 }
 
 export interface InputProps {
-  typeVariants: INPUT_TYPE_VARIANTS;
+  id: string;
   type: string;
+  label: string;
   value: string;
   placeholder: string;
   onChange: Function;
