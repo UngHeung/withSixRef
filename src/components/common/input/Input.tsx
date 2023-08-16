@@ -27,12 +27,12 @@ const StyledLabel = styled.label`
   width: 240px;
   height: 50px;
   font-family: var(--font-eng);
-  font-size: var(--fsize-l);
+  font-size: var(--font-size-l);
   font-style: italic;
   line-height: 50px;
   color: var(--color-gray-d);
-  cursor: text;
   transition: top, height, font 0.3s, 0.3s;
+  cursor: text;
 `;
 
 const StyledInput = styled.input<InputProps>`
