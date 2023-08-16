@@ -3,15 +3,14 @@
  */
 
 import { ButtonProps, InputProps } from "../../libs/interface/CommonInterface";
-import { INPUT_TYPE_VARIANTS } from "../../libs/type/CommonType";
 
 const inputOptionBase: {
-  typeVariants: INPUT_TYPE_VARIANTS;
   value: string;
+  placeholder: string;
   onChange: Function;
 } = {
-  typeVariants: "basic",
   value: "",
+  placeholder: " ",
   onChange: () => {},
 };
 
@@ -24,13 +23,15 @@ export const buttonOptions: ButtonProps = {
 export const inputOptions: { [key: string]: InputProps } = {
   email: {
     ...inputOptionBase,
+    id: "user_email",
     type: "email",
-    placeholder: "이메일을 입력해주세요.",
+    label: "Email",
   },
 
   password: {
     ...inputOptionBase,
+    id: "user_password",
     type: "password",
-    placeholder: "비밀번호를 입력해주세요.",
+    label: "Password",
   },
 };
