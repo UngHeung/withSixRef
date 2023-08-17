@@ -8,6 +8,7 @@ import { BUTTON_TYPE_VARIANTS, LAYOUT_TYPE_VARIANTS } from "../type/CommonType";
 export interface LayoutProps {
   typeVariants: LAYOUT_TYPE_VARIANTS;
   children: ReactNode;
+  disabled?: boolean;
 }
 
 export interface ButtonProps {
