@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 import { BUTTON_TYPE_VARIANTS, LAYOUT_TYPE_VARIANTS } from "../type/CommonType";
 
 export interface LayoutProps {
-  typeVariants: LAYOUT_TYPE_VARIANTS;
+  typevariants: LAYOUT_TYPE_VARIANTS;
   children: ReactNode;
   disabled?: boolean;
 }
@@ -19,7 +19,7 @@ export interface NavItemProps {
 }
 
 export interface ButtonProps {
-  typeVariants: BUTTON_TYPE_VARIANTS;
+  typevariants: BUTTON_TYPE_VARIANTS;
   children: string;
   onClick: Function;
 }
@@ -31,4 +31,5 @@ export interface InputProps {
   value: string;
   placeholder: string;
   onChange: Function;
+  autoComplete?: string;
 }

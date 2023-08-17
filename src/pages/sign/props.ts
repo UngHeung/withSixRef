@@ -15,7 +15,7 @@ const inputOptionBase: {
 };
 
 export const buttonOptions: ButtonProps = {
-  typeVariants: "basic",
+  typevariants: "basic",
   children: "",
   onClick: () => {},
 };

@@ -18,14 +18,24 @@ const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const handleLogin = () => {
+    console.log(email);
+    console.log(password);
+  };
+
   return (
-    <Layout typeVariants="secondary">
+    <Layout typevariants="secondary">
       <TopImageContainer>
         <img src={topLogo} alt="로고" />
       </TopImageContainer>
-      <UserInputContainer>
+      <UserInputContainer
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleLogin();
+        }}
+      >
         <Input {...inputOptions.email} value={email} onChange={(event: INPUT_EVENT) => handler.email(setEmail, event)} />
-        <Input {...inputOptions.password} value={password} onChange={(event: INPUT_EVENT) => handler.email(setPassword, event)} />
+        <Input {...inputOptions.password} value={password} onChange={(event: INPUT_EVENT) => handler.email(setPassword, event)} autoComplete="off" />
         <ButtonContainer>
           <Button {...buttonOptions}>로그인</Button>
           <Link to={"#"}>
@@ -57,7 +67,7 @@ const TopImageContainer = styled.div`
   }
 `;
 
-const UserInputContainer = styled.section`
+const UserInputContainer = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
