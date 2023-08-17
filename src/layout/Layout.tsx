@@ -26,7 +26,8 @@ const StyledMain = styled.main<LayoutProps>`
   height: 100vh;
   margin: 0 auto;
   background-color: white;
-  border: 1px solid var(--color-gray-l);
+  border-left: 1px solid var(--color-gray-l);
+  border-right: 1px solid var(--color-gray-l);
   box-sizing: border-box;
 `;
 
@@ -34,6 +35,7 @@ const TYPE_VARIANTS = {
   primary: css`
     padding: 70px 20px 50px;
   `,
+
   secondary: css`
     padding: 0 20px;
   `,
