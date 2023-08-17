@@ -10,9 +10,9 @@ import { Footer } from "./footer/Footer";
 export const Layout = ({ ...props }: LayoutProps) => {
   return (
     <>
-      {!props.disabled && <Header />}
+      {props.typeVariants === "primary" && <Header />}
       <StyledMain>{props.children}</StyledMain>
-      {!props.disabled && <Footer />}
+      {props.typeVariants === "primary" && <Footer />}
     </>
   );
 };
