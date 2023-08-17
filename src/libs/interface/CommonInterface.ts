@@ -11,6 +11,13 @@ export interface LayoutProps {
   disabled?: boolean;
 }
 
+export interface NavItemProps {
+  pageIcon: string;
+  pageName: string;
+  pageLink: string;
+  key: string;
+}
+
 export interface ButtonProps {
   typeVariants: BUTTON_TYPE_VARIANTS;
   children: string;
