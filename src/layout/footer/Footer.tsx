@@ -16,7 +16,6 @@ const StyledFooter = styled.footer`
   left: 50%;
   width: 390px;
   height: 50px;
-  margin: 0 auto;
   box-sizing: border-box;
   transform: translateX(-50%);
   overflow: hidden;
