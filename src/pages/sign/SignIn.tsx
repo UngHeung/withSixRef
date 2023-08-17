@@ -18,11 +18,6 @@ const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
-    console.log(email);
-    console.log(password);
-  };
-
   return (
     <Layout typevariants="secondary">
       <TopImageContainer>
@@ -31,7 +26,7 @@ const SignIn = () => {
       <UserInputContainer
         onSubmit={(e) => {
           e.preventDefault();
-          handleLogin();
+          handler.login(email, password);
         }}
       >
         <Input {...inputOptions.email} value={email} onChange={(event: INPUT_EVENT) => handler.email(setEmail, event)} />

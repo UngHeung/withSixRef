@@ -12,6 +12,8 @@ const handler = {
   password: (setPassword: Function, event: INPUT_EVENT) => {
     setPassword(event.target.value);
   },
+
+  login: (email: string, password: string) => {},
 };
 
 export default handler;
