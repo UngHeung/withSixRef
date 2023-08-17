@@ -60,6 +60,5 @@ const StyledInput = styled.input<InputProps>`
     height: 70px;
     font-size: var(--font-size-s);
     line-height: 20px;
-    z-index: -1;
   }
 `;
