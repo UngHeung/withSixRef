@@ -10,17 +10,15 @@ import { Footer } from "./footer/Footer";
 export const Layout = ({ ...props }: LayoutProps) => {
   return (
     <>
-      {props.typeVariants === "primary" && <Header />}
+      {props.typevariants === "primary" && <Header />}
       <StyledMain {...props}>{props.children}</StyledMain>
-      {props.typeVariants === "primary" && <Footer />}
+      {props.typevariants === "primary" && <Footer />}
     </>
   );
 };
 
-// const StyledBack = styled.div
-
 const StyledMain = styled.main<LayoutProps>`
-  ${(props) => TYPE_VARIANTS[props.typeVariants]}
+  ${(props) => TYPE_VARIANTS[props.typevariants]}
 
   width: 390px;
   height: 100vh;

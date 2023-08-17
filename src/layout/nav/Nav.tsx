@@ -1,3 +1,7 @@
+/**
+ * 메인 메뉴
+ */
+
 import React from "react";
 import { styled } from "styled-components";
 import { NavItem } from "./NavItem";

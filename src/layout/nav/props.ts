@@ -1,3 +1,7 @@
+/**
+ * 메인 메뉴 속성
+ */
+
 import { NavItemProps } from "../../libs/interface/CommonInterface";
 import home from "../../assets/icons/nav/home.png";
 import together from "../../assets/icons/nav/together.png";
