@@ -17,6 +17,10 @@ export const GlobalStyle = createGlobalStyle`
     --font-size-l: 1.125rem; // title
     --font-size-xl: 1.25rem;
 
+    --font-weight-l: 100;
+    --font-weight-m: 500;
+    --font-weight-b: 700;
+
     --color-main: #77cbd6;
     --color-focus: #c4ecf1;
     --color-back: #f0f0f0;
