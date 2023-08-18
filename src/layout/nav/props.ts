@@ -12,7 +12,7 @@ const itemOptions: NavItemProps[] = [
   {
     pageIcon: home,
     pageName: "홈",
-    pageLink: "/home",
+    pageLink: "/",
     key: "withsix_nav_key_home",
   },
 
