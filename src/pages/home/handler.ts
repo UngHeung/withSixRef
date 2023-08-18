@@ -8,10 +8,10 @@ const handler = {
   category: (event: MOUSE_EVENT, setCategory: Function) => {
     const selectCategory = event.currentTarget.textContent;
 
-    if (selectCategory === "팔로우 피드") {
-      setCategory("follow");
-    } else if (selectCategory === "전체 피드") {
+    if (selectCategory === "전체 피드") {
       setCategory("all");
+    } else if (selectCategory === "팔로우 피드") {
+      setCategory("follow");
     }
   },
 };

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Layout } from "../../layout/Layout";
-import { styled } from "styled-components";
+import { css, styled } from "styled-components";
 import { Link } from "react-router-dom";
 import { HOME_TYPE_VARIANTS } from "../../libs/type/homeType";
 import { HomeProps } from "../../libs/interface/homeInterface";
@@ -15,12 +15,12 @@ export const Home = () => {
         <ul>
           <li>
             <Link to="#" onClick={(event) => handler.category(event, setCategory)}>
-              팔로우 피드
+              전체 피드
             </Link>
           </li>
           <li>
             <Link to="#" onClick={(event) => handler.category(event, setCategory)}>
-              전체 피드
+              팔로우 피드
             </Link>
           </li>
         </ul>
@@ -31,13 +31,16 @@ export const Home = () => {
 
 const MenuContainer = styled.menu<HomeProps>`
   width: 100%;
-  height: 30px;
+  height: 25px;
+  padding: 0 10px;
   background-color: white;
   border-bottom: 1px solid var(--color-gray-l);
   box-sizing: border-box;
   overflow: hidden;
 
   & > ul {
+    ${(props) => TYPE_VARIANTS[props.category]}
+
     float: right;
   }
 
@@ -55,3 +58,19 @@ const MenuContainer = styled.menu<HomeProps>`
     }
   }
 `;
+
+const TYPE_VARIANTS = {
+  all: css`
+    & li:first-child {
+      font-weight: var(--font-weight-b);
+      color: var(--color-black);
+    }
+  `,
+
+  follow: css`
+    & li:last-child {
+      font-weight: var(--font-weight-b);
+      color: var(--color-black);
+    }
+  `,
+};
