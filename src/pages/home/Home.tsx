@@ -1,3 +1,7 @@
+/**
+ * 홈 페이지
+ */
+
 import React, { useState } from "react";
 import { Layout } from "../../layout/Layout";
 import { css, styled } from "styled-components";
@@ -25,6 +29,7 @@ export const Home = () => {
           </li>
         </ul>
       </MenuContainer>
+      <section></section>
     </Layout>
   );
 };
