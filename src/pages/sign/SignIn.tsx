@@ -15,8 +15,8 @@ import { Link } from "react-router-dom";
 import signUpIcon from "../../assets/icons/common/icon-signup.svg";
 
 const SignIn = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
 
   return (
     <Layout typevariants="secondary">
@@ -82,7 +82,7 @@ const ButtonContainer = styled.div`
   & > a {
     float: right;
     font-size: var(--font-size-xs);
-    font-weight: 500;
+    font-weight: var(--font-weight-m);
     color: var(--color-gray-d);
     text-align: right;
   }
