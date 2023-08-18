@@ -33,3 +33,8 @@ export interface InputProps {
   onChange: Function;
   autoComplete?: string;
 }
+
+export interface ProfileProps {
+  link: string;
+  image?: string;
+}
