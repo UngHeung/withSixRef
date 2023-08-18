@@ -22,13 +22,13 @@ const StyledLi = styled.li`
   height: 50px;
 
   & > figure {
-    margin-top: 2.5px;
+    margin-top: 5px;
     text-align: center;
     line-height: 20px;
   }
 
   & img {
-    height: 25px;
+    height: 20px;
     vertical-align: middle;
   }
 
