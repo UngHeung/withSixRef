@@ -6,6 +6,7 @@ import React from "react";
 import { styled } from "styled-components";
 import { NavItem } from "./NavItem";
 import itemOptions from "./props";
+import { ProfileImage } from "../../components/common/profile/ProfileImage";
 
 export const Nav = () => {
   return (
@@ -14,8 +15,8 @@ export const Nav = () => {
         {itemOptions.map((props) => {
           return <NavItem {...props} />;
         })}
-        <li key={"profile"} style={{ width: "50px", height: "50px", background: "#ddd" }}>
-          profile
+        <li key={"profile"}>
+          <ProfileImage />
         </li>
       </ul>
     </StyledNav>
@@ -30,5 +31,10 @@ const StyledNav = styled.nav`
   & > ul {
     display: flex;
     justify-content: space-between;
+  }
+
+  & li {
+    width: 50px;
+    height: 50px;
   }
 `;
