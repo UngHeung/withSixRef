@@ -5,6 +5,20 @@
 import { ReactNode } from "react";
 import { BUTTON_TYPE_VARIANTS, LAYOUT_TYPE_VARIANTS } from "../type/CommonType";
 
+export interface UserProps {
+  _id: string;
+  email: string;
+  hearts: string[];
+  isfollow: boolean[];
+  following: string[];
+  follower: string[];
+  password: string;
+  username: string;
+  accountname: string;
+  intro: string;
+  image: string;
+}
+
 export interface LayoutProps {
   typevariants: LAYOUT_TYPE_VARIANTS;
   children: ReactNode;
@@ -35,6 +49,6 @@ export interface InputProps {
 }
 
 export interface ProfileProps {
-  link: string;
-  image?: string;
+  user: UserProps;
+  profilelink: string;
 }
