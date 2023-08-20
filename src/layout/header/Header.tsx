@@ -6,8 +6,9 @@ import React from "react";
 import { styled } from "styled-components";
 import logo from "../../assets/logo/LOGO-negative.svg";
 import { Link } from "react-router-dom";
+import { UserProps } from "../../libs/interface/CommonInterface";
 
-export const Header = () => {
+export const Header = ({ ...props }: UserProps) => {
   return (
     <StyledHeader>
       <StyledLogo>
@@ -15,7 +16,7 @@ export const Header = () => {
           <img src={logo} alt="로고" />
         </Link>
       </StyledLogo>
-      <StyledUserName>엉흥</StyledUserName>
+      <StyledUserName>{props.username}</StyledUserName>
     </StyledHeader>
   );
 };
