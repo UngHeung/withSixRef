@@ -2,13 +2,12 @@ import React from "react";
 import { styled } from "styled-components";
 import defualtImage from "../../../assets/images/default-image-profile.png";
 import { Link } from "react-router-dom";
-import { ProfileProps } from "../../../libs/interface/CommonInterface";
 
-export const ProfileImage = ({ ...props }: ProfileProps) => {
+export const ProfileImage = ({ ...props }) => {
   return (
     <ProfileContainer>
-      <Link to={props.profilelink}>
-        <img src={props.user.image || defualtImage} alt="프로필 이미지" />
+      <Link to={"#"}>
+        <img src={props.image || defualtImage} alt="프로필 이미지" />
       </Link>
     </ProfileContainer>
   );
