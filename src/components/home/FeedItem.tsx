@@ -1,13 +1,13 @@
 import React from "react";
 import { styled } from "styled-components";
 import { ProfileImage } from "../common/profile/ProfileImage";
-import { ProfileProps } from "../../libs/interface/CommonInterface";
+import { UserProps } from "../../libs/interface/CommonInterface";
 
-export const FeedItem = ({ ...props }: ProfileProps) => {
+export const FeedItem = ({ ...props }: UserProps) => {
   return (
     <StyledLi>
       <ProfileContainer>
-        <ProfileImage {...props} />
+        <ProfileImage image={props.image} />
       </ProfileContainer>
       <FeedItemContainer>
         <figure>
