@@ -3,14 +3,16 @@
  */
 
 import { css, styled } from "styled-components";
-import { LayoutProps } from "../libs/interface/CommonInterface";
+import { LayoutProps, UserProps } from "../libs/interface/CommonInterface";
 import { Header } from "./header/Header";
 import { Footer } from "./footer/Footer";
+import { useSelector } from "react-redux";
 
 export const Layout = ({ ...props }: LayoutProps) => {
+  const userData = useSelector((state: UserProps) => state);
   return (
     <>
-      {props.typevariants === "primary" && <Header />}
+      {props.typevariants === "primary" && <Header {...userData} />}
       <StyledMain {...props}>{props.children}</StyledMain>
       {props.typevariants === "primary" && <Footer />}
     </>
