@@ -7,16 +7,15 @@ import { BUTTON_TYPE_VARIANTS, LAYOUT_TYPE_VARIANTS } from "../type/CommonType";
 
 export interface UserProps {
   _id: string;
-  email: string;
-  hearts: string[];
-  isfollow: boolean[];
-  following: string[];
-  follower: string[];
-  password: string;
   username: string;
   accountname: string;
   intro: string;
   image: string;
+  isfollow: boolean;
+  followingCount: number;
+  followerCount: number;
+  following: string[];
+  follower: string[];
 }
 
 export interface LayoutProps {
@@ -49,6 +48,5 @@ export interface InputProps {
 }
 
 export interface ProfileProps {
-  user: UserProps;
-  profilelink: string;
+  profilImage: string;
 }
